@@ -25,7 +25,7 @@
             }
         }
     </style>
-    <title>Страница авторизации</title>
+    <title>Sign in page</title>
 </head>
 <body>
 
@@ -41,12 +41,12 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li><a href="/blog">Статьи</a></li>
-                <li><a href="/blog/editor">Добавить свою</a></li>
+                <li><a href="/blog">Articles</a></li>
+                <li><a href="/blog/editor">Add note</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="active">
-                    <a href="/blog/login"><span class="glyphicon glyphicon-log-in"></span> Залогироваться</a>
+                    <a href="/blog/login"><span class="glyphicon glyphicon-log-in"></span> Sign in</a>
                 </li>
             </ul>
         </div>
@@ -59,10 +59,10 @@
 
             <form th:action="@{/blog/login}" method="post">
                 <fieldset>
-                    <h2>Введите данные</h2>
+                    <h2>Enter value</h2>
                     <div th:if="${param.error}">
                         <div class="alert alert-danger">
-                            Вы ввели неправильные данные
+                            Wrong value
                         </div>
                     </div>
                     <div class="input-group">
@@ -78,7 +78,7 @@
                     </div>
                     <br/>
                     <div>
-                        <button type="submit" class="btn btn-success">Войти</button>
+                        <button type="submit" class="btn btn-success">Enter</button>
                     </div>
                 </fieldset>
             </form>

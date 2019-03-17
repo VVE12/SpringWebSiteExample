@@ -25,7 +25,7 @@
             }
         }
     </style>
-    <title>Заглавная страница блога</title>
+    <title>Main Page</title>
 </head>
 <body>
 
@@ -41,11 +41,11 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/blog">Статьи</a></li>
-                <li><a href="/blog/editor">Добавить свою</a></li>
+                <li class="active"><a href="/blog">Articles</a></li>
+                <li><a href="/blog/editor">Add note</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/blog/login"><span class="glyphicon glyphicon-log-in"></span> Залогироваться</a></li>
+                <li><a href="/blog/login"><span class="glyphicon glyphicon-log-in"></span> Registration</a></li>
             </ul>
         </div>
     </div>
@@ -57,19 +57,18 @@
             <div>
                 <div class="well">
                     <div class="panel-body">
-                        <h1>Добро пожаловать</h1>
+                        <h1>Welcome</h1>
                         <p>
-                            Этот сайт является демо версией возможностей <b>framework'а Spring</b><br/>
-                            C исходным кодом можете ознакомиться <a href="https://github.com/izebit/spring-web-demo">здесь</a>
+                            Demo page of <b>Spring framework</b><br/>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <div th:each="article : ${articles}">
-                <h3 th:text="${article.title}"/>
-                <p th:text="${article.content}"/>
-                <a th:href="@{/blog/editor/delete/} + ${article.id}">
+            <div th:each="app : ${apps}">
+                <h3 th:text="${app.title}"/>
+                <p th:text="${app.content}"/>
+                <a th:href="@{/blog/editor/delete/} + ${app.id}">
                     <a href="#">delete</a>
                 </a>
                 <hr/>

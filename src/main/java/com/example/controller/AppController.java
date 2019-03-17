@@ -19,7 +19,7 @@ public class AppController {
 
     @RequestMapping
     public String AppPage(Model model) {
-        model.addAttribute("message", "Hey, there!");
+        model.addAttribute("apps", appService.getAll());
         return "main";
     }
     @RequestMapping(value = "/editor")
